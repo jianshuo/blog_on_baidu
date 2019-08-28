@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="title"> 
+    <text>{{category}}</text>
+</view>
+    
+ <view s-for="entries" s-for-index="index" s-for-item="item" class="entry-list">
+        <button class="entry-title">
+            <navigator class="nav" open-type="navigate" url="/pages/detail/detail?id={{item.slug}}">{{item.title.rendered}}</navigator>
+        </button>
+</view>
+<button type="primary"><navigator url="/pages/index/index">回首页</navigator></button>
+</view>

@@ -1,0 +1,23 @@
+.container { 
+    padding: 10px; 
+}
+
+.entry {
+    padding: 0px;
+}
+
+.entry-title {
+    font-size: 24pt;
+    padding-bottom: 8px;
+}
+
+.entry-content {
+    font: 25px;
+}
+
+button.category {
+    margin-top: 5px;
+}
+
+.content {
+}

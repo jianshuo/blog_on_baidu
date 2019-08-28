@@ -1,0 +1,9 @@
+
+<view class="container">
+    <view class="title">王建硕</view>
+    <view s-for="entries" s-for-index="index" s-for-item="item" class="entry-list">
+        <button class="entry-title">
+            <navigator url="/pages/list/list?category={{item.id}}">{{item.name}} <text class="category-count">{{item.count}}</text></navigator>
+        </button>
+    </view>
+</view>

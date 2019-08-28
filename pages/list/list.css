@@ -1,0 +1,20 @@
+.title {
+    background-color: lightblue;
+    color: white;
+    font-size:30pt;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left:20px;
+}
+
+button {
+    margin-top: 7px;
+}
+
+.entry-titletrue {
+    background-color: red;
+}
+
+.entry-title0 {
+    background-color: blue;
+}
