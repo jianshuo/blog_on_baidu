@@ -13,7 +13,7 @@ Page({
     },
     onLoad(query) {
         var wp = require('../../lib/wordpress.js');
-        wp.get('categories?per_page=40', this, function(res, page) {
+        wp.get(wp.uri('categories', {'per_page': 40}), this, function(res, page) {
             console.log(res);            
             page.setData({
                 'entries' : res.data
@@ -21,11 +21,8 @@ Page({
         });
         console.log('Pre-caching');
         this.data.entries.forEach(function(item){
-            wp.get('posts?categories=' + item.id, this, function(){});
+            wp.get(wp.uri('posts', {'categories': item.id, 'per_page': 40}), this, function(){});
         });
-
-        var ps = getCurrentPages();
-        console.log(ps);
     },
     getUserInfo(e) {
         swan.login({

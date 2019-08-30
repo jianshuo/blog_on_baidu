@@ -33,6 +33,7 @@ App({
     },
     globalData : {
         proxy: 'https://wangjianshuo.com/proxy.php?csurl=',
-        siteEndPoint: 'http://home.wangjianshuo.com/cn/wp-json/wp/v2/'
+        siteEndPoint: 'http://home.wangjianshuo.com/cn/wp-json/wp/v2/',
+        cacheEnabled: false
     }
 });
