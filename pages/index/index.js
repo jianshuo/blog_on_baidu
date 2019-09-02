@@ -1,6 +1,7 @@
 /**
  * @file index.js
- * @author swan
+ * @author Jian Shuo Wang
+ * @date 08-30-2019
  */
 const app = getApp()
 
@@ -9,7 +10,7 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUse: swan.canIUse('button.open-type.getUserInfo'),
-        entries: [{name: '书和电影', id: 11}]
+        entries: [{name: '加载中。。。', id: 1}]
     },
     onLoad(query) {
         var wp = require('../../lib/wordpress.js');

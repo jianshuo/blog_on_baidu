@@ -11,14 +11,14 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUse: swan.canIUse('button.open-type.getUserInfo'),
-        entries: [{name: 'entry 1', 'id': 1}]
+        entries: [{title:{rendered: '加载中。。。'}, 'id': 1}]
     },
 
     onLoad(query) {
         // 监听页面加载的生命周期函数
         console.log("Getting " + query.category);
 
-        wp.get('posts?categories=' + query.category, this, function(res, page) {
+        wp.get(wp.uri('posts', {'categories': query.category, 'per_page': 40}), this, function(res, page) {
             console.log(res);            
             page.setData({
                 'entries' : res.data

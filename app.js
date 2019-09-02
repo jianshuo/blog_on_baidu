@@ -34,6 +34,10 @@ App({
     globalData : {
         proxy: 'https://wangjianshuo.com/proxy.php?csurl=',
         siteEndPoint: 'http://home.wangjianshuo.com/cn/wp-json/wp/v2/',
-        cacheEnabled: false
+        cacheEnabled: true
     }
 });
+
+
+// http://home.wangjianshuo.com/cn/\d\d\d\d\d\d\d\d_(.*).htm$ => pages/detail/detail?id=${1}
+// http://home.wangjianshuo.com/cn/20080304_ecaec.htm => pages/detail/detail?id=ecaec

@@ -19,5 +19,8 @@ button.category {
     margin-top: 5px;
 }
 
-.content {
+.entry-meta {
+    color: gray;
+    font-size: 80%;
+    margin-bottom: 20px;
 }

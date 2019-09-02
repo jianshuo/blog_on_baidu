@@ -1,15 +1,25 @@
 <view class="container">
     <view s-for="entries" class="entry">
         <view class="entry-title">{{item.title.rendered}}</view>
+        <view class="entry-meta">{{item.date}}</view>
         <view class="entry-content">
             <rich-text nodes="{{item.content.rendered}}" class="content">
             </rich-text>
+        </view>
+        <view class="comments" s-for="{{comments}}">
+            <text>{{item.author_name}}</text>, 
         </view>
         <view>
             <button type="primary" class="category">
                 <navigator url="/pages/list/list?category={{item.categories[0]}}"
                 open-type="redirect">
                 返回类目
+                </navigator>
+            </button>
+            <button type="secondary" class="category">
+                <navigator url="/pages/webpage/webpage?url={{item.link}}"
+                open-type="redirect">
+                浏览器中查看
                 </navigator>
             </button>
         </view>
